@@ -5,7 +5,7 @@ import HamburgerMenu from "./HamburgerMenu";
 export default function Header() {
     const [menuIsOpen, setMenuIsOpen] = useState(false);
     return (
-        <div className="bg-slate-900 h-8 flex">
+        <div className="bg-slate-900  flex">
             <Link href="./">土佐犬のポートフォリオ</Link>
             <button
                 onClick={() => setMenuIsOpen(!menuIsOpen)}
@@ -15,7 +15,7 @@ export default function Header() {
             </button>
             <div
                 className={
-                    "absolute mt-4 right-5 top-4  " +
+                    "absolute mt-4 right-5 lg:top-16 md:top-4  " +
                     (menuIsOpen ? " " : " hidden")
                 }
             >

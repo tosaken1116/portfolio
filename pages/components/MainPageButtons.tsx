@@ -24,22 +24,24 @@ export default function MainPageButton() {
     ];
     const [Buttons, setButtons] = useState(dammyButton);
     return (
-        <div className=" grid grid-cols-2 grid-rows-4 mx-12 mt-12">
-            <div className={styles.test}>
-                {Buttons.map((button, index) => [
-                    <div key={index}>
-                        <Link
-                            href={button.url}
-                            className={
-                                " px-0.5 py-1 text-white hover:scale-110 hover:bg-amber-500 bg-slate-800 block duration-300 delay-100 first:-rotate-0 last:rotate-0 mt-1 rounded-r-sm hover:text-black"
-                            }
-                        >
-                            {button.text}
-                        </Link>
-                    </div>,
-                ])}
+        <div className="flex justify-center ">
+            <div className=" grid md:grid-cols-2 sm:grid-cols-1 grid-rows-4 mx-12 mt-12">
+                <div className={styles.test}>
+                    {Buttons.map((button, index) => [
+                        <div key={index} className="">
+                            <Link
+                                href={button.url}
+                                className={
+                                    " p-3 text-white hover:scale-110 hover:bg-amber-500 bg-slate-800 block duration-300 delay-100  mt-1 rounded-r-sm hover:text-black"
+                                }
+                            >
+                                {button.text}
+                            </Link>
+                        </div>,
+                    ])}
+                </div>
+                <Profile />
             </div>
-            <Profile />
         </div>
     );
 }
