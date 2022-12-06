@@ -3,18 +3,11 @@ import Header from "./components/Header";
 
 export default function Hackathon() {
     return (
-        <div>
+        <div className="lg:text-7xl md:text-3xl">
             <Header></Header>
-            <div className="text-xl mt-2 ml-2">Hackathon</div>
-            <div className=" h-[1px] bg-white bg-gradient-to-r from-slate-200 to-black ml-2 w-32 rounded-full"></div>
+            <div className="mt-2 ml-2">Hackathon</div>
+            <div className=" xl:h-[3px] md:h-[2px] sm:h-[1px] xs:h-[1px] bg-white bg-gradient-to-r from-slate-200 to-black ml-2 xl:w-96 md:w-48  sm:w-24 xs:w-20 rounded-full"></div>
             <Artifacts />
-            <iframe
-                src="https://azu.github.io/github-issue-widget/?owner=tosaken1116&repo=Backs-of-seniors-hackathon&limit=10"
-                allowTransparency={true}
-                frameBorder="0"
-                scrolling="0"
-                width="100%"
-            ></iframe>
         </div>
     );
 }
